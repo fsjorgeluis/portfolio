@@ -7,7 +7,7 @@ import BuildTwoToneIcon from "@material-ui/icons/BuildTwoTone";
 import ContactMailTwoToneIcon from "@material-ui/icons/ContactMailTwoTone";
 import MenuIcon from "@material-ui/icons/Menu";
 import CancelIcon from "@material-ui/icons/Cancel";
-import logo from '../../images/logo_2.png';
+import logo from '../../images/logos/logo_2.png';
 
 
 const Navbar = () => {

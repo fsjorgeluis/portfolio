@@ -1,4 +1,5 @@
 import { makeStyles, Typography } from "@material-ui/core";
+import Technologies from "../Technologies";
 
 
 const Skills = ({ id, title, dark }) => {
@@ -7,6 +8,7 @@ const Skills = ({ id, title, dark }) => {
         <div className={`${classes.section} ${dark && classes.sectionDark}`}>
             <div className={classes.sectionContent} id={id}>
                 <Typography variant="h3">{title}</Typography>
+                <Technologies />
             </div>
         </div>
     )

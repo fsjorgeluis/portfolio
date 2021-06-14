@@ -1,5 +1,5 @@
 import { Button, Card, CardActions, CardContent, CardMedia, makeStyles, Typography } from "@material-ui/core";
-import TypeWriterEffect from 'react-typewriter-effect';
+import Typewriter from 'typewriter-effect';
 import me from '../../images/me.jpg';
 import cv from '../../images/test-cv.pdf';
 
@@ -13,25 +13,29 @@ const About = ({ id, title, dark }) => {
                 <Card className={classes.card}>
                     <CardMedia image={me} className={classes.cardMedia} title="avatar" />
                     <CardContent className={classes.cardContent}>
-                        <TypeWriterEffect
-                            text="Hi, I am Jorge Fernández"
-                            textStyle={{ fontSize: "2rem", fontWeight: "700px", color: "#F72C25" }}
-                            startDelay={100}
-                            cursorColor="black"
-                            typeSpeed={100}
-                        />
-
-                        <TypeWriterEffect
-                            text="And I'm an awesome Frontend Developer"
-                            textStyle={{ fontSize: "1.2rem", fontWeight: "500px" }}
-                            startDelay={2500}
-                            cursorColor="black"
-                            typeSpeed={100}
+                        <Typewriter
+                            onInit={(typewriter) => {
+                                typewriter
+                                    .typeString("<span style='font-size: 2rem; font-weight: bold; color: #F72C25'>What's up! yo,</span>")
+                                    .typeString('<br>')
+                                    .pauseFor(300)
+                                    .typeString("<span style='font-size: 2rem; font-weight: bold; color: #F72C25'>I'm Jorge Fernández.</span>")
+                                    .typeString('<br>')
+                                    .pauseFor(300)
+                                    .typeString("<span style='font-size: 1.2rem; font-weight: bold'>And I ❤️ doing stuff as fullstack developer!</span>")
+                                    .pauseFor(2500)
+                                    .deleteAll()
+                                    .start();
+                            }}
+                            options={{
+                                loop: true,
+                                cursor: "__"
+                            }}
                         />
 
                         <Typography variant="h6" color="textSecondary">
-                            Texto que describre como somos de buenos programadores
-                            y lo mucho que vamos a aportar a la empresa que nos contrate...
+                            C'mon, scroll down and know more about me, or if you are lazy one
+                            download my cv <a href={cv} download>clicking here</a> or obviously on the right side bottom corner button. Cheers 😄
                         </Typography>
                     </CardContent>
                     <CardActions>
@@ -67,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
         position: "relative"
     },
     cardMedia: {
-        width: "250px",
+        width: "400px", //250px
         height: "auto",
         [theme.breakpoints.down("xs")]: {
             display: "none"

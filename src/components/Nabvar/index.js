@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AppBar, Divider, Drawer, IconButton, List, ListItem, ListItemIcon, makeStyles, Toolbar } from "@material-ui/core";
 import { Link, animateScroll as scroll } from 'react-scroll';
 import InfoTwoToneIcon from '@material-ui/icons/InfoTwoTone';
+import AccessibilityNewTwoToneIcon from '@material-ui/icons/AccessibilityNewTwoTone';
 import EmojiObjectsTwoToneIcon from "@material-ui/icons/EmojiObjectsTwoTone";
 import BuildTwoToneIcon from "@material-ui/icons/BuildTwoTone";
 import ContactMailTwoToneIcon from "@material-ui/icons/ContactMailTwoTone";
@@ -23,7 +24,7 @@ const Navbar = () => {
         {
             id: "aptitudes",
             text: "Aptitudes",
-            icon: <EmojiObjectsTwoToneIcon fontSize="large" className={classes.skills} />
+            icon: <AccessibilityNewTwoToneIcon fontSize="large" className={classes.aptitudes} />
         },
         {
             id: "skills",
@@ -130,7 +131,7 @@ const useStyles = makeStyles((theme) => ({
         color: "#A9E5BB"
     },
     aptitudes: {
-        color: "#F7B32B"
+        color: "#2D1E2F"
     },
     skills: {
         color: "#F7B32B"

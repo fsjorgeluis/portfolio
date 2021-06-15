@@ -10,6 +10,7 @@ import reactIcon from '../../images/techs/react-2.svg'
 import reduxIcon from '../../images/techs/redux.svg';
 import html5Icon from '../../images/techs/html5-icon.svg';
 import css3Icon from '../../images/techs/css-icon.svg';
+import phpIcon from '../../images/techs/php.svg';
 import databaseIcon from '../../images/techs/database-icon.svg';
 
 const Technologies = () => {
@@ -62,6 +63,11 @@ const Technologies = () => {
             stars: 3,
         },
         {
+            src: phpIcon,
+            title: "PHP vanilla and common frameworks like laravel as well cms like wordpress",
+            stars: 4,
+        },
+        {
             src: databaseIcon,
             title: "Relational and no-Relational database management",
             stars: 4,
@@ -69,39 +75,41 @@ const Technologies = () => {
     ];
 
     return (
-        <Timeline align="left">
-            {
-                techs.map(({ src, title, stars }, index) => (
-                    <TimelineItem key={index}>
-                        <TimelineSeparator>
-                            <img src={src} alt={title} className={classes.customLogo} />
-                            <TimelineConnector />
-                        </TimelineSeparator>
-                        <TimelineContent>
-                            <Paper elevation={3} className={classes.lineContent}>
-                                <Typography variant="h6" component="h1">
-                                    {title}
-                                </Typography>
-                                <StartRating stars={stars} />
-                            </Paper>
-                        </TimelineContent>
-                    </TimelineItem>
-                ))
-            }
-        </Timeline>
+        <div className={classes.timeline}>
+            <Timeline align="left">
+                {
+                    techs.map(({ src, title, stars }, index) => (
+                        <TimelineItem key={index}>
+                            <TimelineSeparator>
+                                <img src={src} alt={title} className={classes.customLogo} />
+                                <TimelineConnector />
+                            </TimelineSeparator>
+                            <TimelineContent>
+                                <Paper elevation={3} className={classes.lineContent}>
+                                    {/* variant="h6" */}
+                                    <Typography variant="subtitle1" component="h1">
+                                        {title}
+                                    </Typography>
+                                    <StartRating stars={stars} />
+                                </Paper>
+                            </TimelineContent>
+                        </TimelineItem>
+                    ))
+                }
+            </Timeline>
+        </div>
     );
 }
 
 const useStyles = makeStyles((theme) => ({
     customLogo: {
-        width: "25px",
+        width: "30px",
     },
     lineContent: {
         padding: "6px 16px",
     },
     timeline: {
-        display: "flex",
-        justifyContent: "flex-start"
+        paddingTop: "2vh",
     },
 }));
 

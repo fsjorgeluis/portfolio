@@ -2,6 +2,7 @@ import { makeStyles, Paper, Typography } from "@material-ui/core";
 import { Timeline, TimelineConnector, TimelineContent, TimelineItem, TimelineSeparator } from "@material-ui/lab";
 import StartRating from "../Rating";
 import proactivityIcon from "../../images/aptitudes/skills.png";
+import creativityIcon from "../../images/aptitudes/creativity.svg";
 import enthusiastIcon from "../../images/aptitudes/enthusiast.png";
 import positiveIcon from "../../images/aptitudes/positive-thinking.png";
 import comunicationIcon from "../../images/aptitudes/conversation.png";
@@ -18,6 +19,11 @@ const Aptitudes = () => {
         {
             src: proactivityIcon,
             title: "Proactivity",
+            stars: 5,
+        },
+        {
+            src: creativityIcon,
+            title: "Creativity",
             stars: 5,
         },
         {
@@ -59,30 +65,36 @@ const Aptitudes = () => {
     ];
 
     return (
-        <Timeline align="right">
-            {
-                skills.map(({ src, title, stars, cups }, index) => (
-                    <TimelineItem key={index}>
-                        <TimelineSeparator>
-                            <img src={src} alt={title} className={classes.customLogo} />
-                            <TimelineConnector />
-                        </TimelineSeparator>
-                        <TimelineContent>
-                            <Paper elevation={3} className={classes.lineContent}>
-                                <Typography variant="h6" component="h1">
-                                    {title}
-                                </Typography>
-                                <StartRating stars={stars} cups={cups} />
-                            </Paper>
-                        </TimelineContent>
-                    </TimelineItem>
-                ))
-            }
-        </Timeline>
+        <div className={classes.timeline}>
+            <Timeline align="right">
+                {
+                    skills.map(({ src, title, stars, cups }, index) => (
+                        <TimelineItem key={index}>
+                            <TimelineSeparator>
+                                <img src={src} alt={title} className={classes.customLogo} />
+                                <TimelineConnector />
+                            </TimelineSeparator>
+                            <TimelineContent>
+                                <Paper elevation={3} className={classes.lineContent}>
+                                    {/* variant="h6" */}
+                                    <Typography variant="subtitle1" component="h1">
+                                        {title}
+                                    </Typography>
+                                    <StartRating stars={stars} cups={cups} />
+                                </Paper>
+                            </TimelineContent>
+                        </TimelineItem>
+                    ))
+                }
+            </Timeline>
+        </div>
     );
 }
 
 const useStyles = makeStyles((theme) => ({
+    timeline: {
+        paddingTop: "2vh",
+    },
     customLogo: {
         width: "35px",
     },

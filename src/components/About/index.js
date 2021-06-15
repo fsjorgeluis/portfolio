@@ -8,7 +8,7 @@ const About = ({ id, title, dark }) => {
     return (
         <div className={`${classes.section} ${dark && classes.sectionDark}`}>
             <div className={classes.sectionContent} id={id}>
-                <Typography variant="h3">{title}</Typography>
+                {/* <Typography variant="h3">{title}</Typography> */}
 
                 <Card className={classes.card}>
                     <CardMedia image={me} className={classes.cardMedia} title="avatar" />
@@ -63,6 +63,7 @@ const useStyles = makeStyles((theme) => ({
     sectionContent: {
         maxWidth: "80vw",
         margin: "0 auto",
+        paddingTop: "4vh",
     },
     card: {
         height: "70vh",
@@ -87,7 +88,10 @@ const useStyles = makeStyles((theme) => ({
             [theme.breakpoints.down("xs")]: {
                 display: "none"
             }
-        }
+        },
+        [theme.breakpoints.down("xs")]: {
+            textAlign: "center"
+        },
     },
     downloadButton: {
         position: "absolute",

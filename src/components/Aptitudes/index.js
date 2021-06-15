@@ -1,6 +1,14 @@
 import { makeStyles, Paper, Typography } from "@material-ui/core";
-import { Timeline, TimelineConnector, TimelineContent, TimelineItem, TimelineOppositeContent, TimelineSeparator } from "@material-ui/lab";
+import { Timeline, TimelineConnector, TimelineContent, TimelineItem, TimelineSeparator } from "@material-ui/lab";
 import StartRating from "../Rating";
+import proactivityIcon from "../../images/aptitudes/skills.png";
+import enthusiastIcon from "../../images/aptitudes/enthusiast.png";
+import positiveIcon from "../../images/aptitudes/positive-thinking.png";
+import comunicationIcon from "../../images/aptitudes/conversation.png";
+import leaderIcon from "../../images/aptitudes/leadership.png";
+import teamworkIcon from "../../images/aptitudes/united.png";
+import learnIcon from "../../images/aptitudes/learning.png";
+import coffeeIcon from "../../images/aptitudes/coffee-cup.png";
 
 
 const Aptitudes = () => {
@@ -8,42 +16,42 @@ const Aptitudes = () => {
 
     const skills = [
         {
-            src: "",
+            src: proactivityIcon,
             title: "Proactivity",
             stars: 5,
         },
         {
-            src: "",
+            src: enthusiastIcon,
             title: "Enthusiastic",
             stars: 5,
         },
         {
-            src: "",
+            src: positiveIcon,
             title: "Positive attitude",
             stars: 5,
         },
         {
-            src: "",
+            src: comunicationIcon,
             title: "Comunication",
             stars: 5,
         },
         {
-            src: "",
+            src: leaderIcon,
             title: "Leadership",
             stars: 5,
         },
         {
-            src: "",
+            src: teamworkIcon,
             title: "Teamwork",
             stars: 5,
         },
         {
-            src: "",
+            src: learnIcon,
             title: "Capacity of learn",
             stars: 5,
         },
         {
-            src: "",
+            src: coffeeIcon,
             title: "Coffee drinker",
             stars: 5,
         },
@@ -75,7 +83,7 @@ const Aptitudes = () => {
 
 const useStyles = makeStyles((theme) => ({
     customLogo: {
-        width: "25px",
+        width: "35px",
     },
     lineContent: {
         padding: "6px 16px",

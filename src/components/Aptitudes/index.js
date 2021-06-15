@@ -54,13 +54,14 @@ const Aptitudes = () => {
             src: coffeeIcon,
             title: "Coffee drinker",
             stars: 5,
+            cups: true,
         },
     ];
 
     return (
         <Timeline align="right">
             {
-                skills.map(({ src, title, stars }, index) => (
+                skills.map(({ src, title, stars, cups }, index) => (
                     <TimelineItem key={index}>
                         <TimelineSeparator>
                             <img src={src} alt={title} className={classes.customLogo} />
@@ -71,7 +72,7 @@ const Aptitudes = () => {
                                 <Typography variant="h6" component="h1">
                                     {title}
                                 </Typography>
-                                <StartRating stars={stars} />
+                                <StartRating stars={stars} cups={cups} />
                             </Paper>
                         </TimelineContent>
                     </TimelineItem>

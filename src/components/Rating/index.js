@@ -1,14 +1,26 @@
-const { Box } = require("@material-ui/core")
-const { Rating } = require("@material-ui/lab")
+import Box from '@material-ui/core/Box';
+import { withStyles } from '@material-ui/core';
+import Rating from '@material-ui/lab/Rating';
+import FreeBreakfastTwoToneIcon from '@material-ui/icons/FreeBreakfastTwoTone';
 
+const StyledRating = withStyles({
+    iconFilled: {
+        color: '#F7B32B',
+    },
+})(Rating);
 
-const StartRating = ({ stars }) => {
+const StartRating = ({ stars, cups }) => {
     return (
-        <div>
-            <Box component="fieldset" borderColor="transparent">
-                <Rating name="read-only" readOnly value={stars} />
-            </Box>
-        </div>
+        <Box component="fieldset" borderColor="transparent">
+            {
+                cups ? <StyledRating
+                    name="read-only"
+                    readOnly
+                    value={stars}
+                    icon={<FreeBreakfastTwoToneIcon fontSize="inherit" />}
+                /> : <Rating name="read-only" readOnly value={stars} />
+            }
+        </Box>
     );
 }
 

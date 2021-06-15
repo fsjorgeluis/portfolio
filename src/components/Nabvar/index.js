@@ -21,6 +21,11 @@ const Navbar = () => {
             icon: <InfoTwoToneIcon fontSize="large" className={classes.about} />
         },
         {
+            id: "aptitudes",
+            text: "Aptitudes",
+            icon: <EmojiObjectsTwoToneIcon fontSize="large" className={classes.skills} />
+        },
+        {
             id: "skills",
             text: "Skills",
             icon: <EmojiObjectsTwoToneIcon fontSize="large" className={classes.skills} />
@@ -123,6 +128,9 @@ const useStyles = makeStyles((theme) => ({
     },
     about: {
         color: "#A9E5BB"
+    },
+    aptitudes: {
+        color: "#F7B32B"
     },
     skills: {
         color: "#F7B32B"

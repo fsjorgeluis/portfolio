@@ -1,5 +1,5 @@
 import { makeStyles, Paper, Typography } from '@material-ui/core';
-import { Timeline, TimelineConnector, TimelineContent, TimelineItem, TimelineOppositeContent, TimelineSeparator } from '@material-ui/lab';
+import { Timeline, TimelineConnector, TimelineContent, TimelineItem, TimelineSeparator } from '@material-ui/lab';
 import StartRating from '../Rating';
 import nodejsIcon from '../../images/techs/nodejs-icon.svg';
 import expressIcon from '../../images/techs/express.svg';

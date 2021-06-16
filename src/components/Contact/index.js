@@ -1,48 +1,15 @@
 import { useState } from "react";
 import { useFormik } from "formik";
-import { Button, makeStyles, Paper, Radio, TextField, Typography } from "@material-ui/core";
+import {
+    Button,
+    Paper,
+    Radio,
+    TextField,
+    Typography
+} from "@material-ui/core";
+import { validate } from "./validation";
+import { useStyles } from "./styles";
 
-const validate = values => {
-    const errors = {};
-
-    if (!values.name) {
-        errors.name = {
-            status: true,
-            message: 'This is a required field!'
-        };
-    } else if (values.name.length > 15) {
-        errors.name = {
-            status: true,
-            message: 'Must be 15 characters or less'
-        };
-    }
-
-    if (!values.email) {
-        errors.email = {
-            status: true,
-            message: 'This is a required field!'
-        };
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-        errors.email = {
-            status: true,
-            message: 'Invalid email address'
-        };
-    }
-
-    if (!values.message) {
-        errors.message = {
-            status: true,
-            message: 'This is a required field!'
-        };
-    } else if (values.message.length < 5) {
-        errors.message = {
-            status: true,
-            message: 'Must have more than 5 characters'
-        };
-    }
-
-    return errors;
-};
 
 const Contact = ({ id, title, dark }) => {
     const [value, setValue] = useState("Hello");
@@ -146,68 +113,7 @@ const Contact = ({ id, title, dark }) => {
                 </Paper>
             </div>
         </div>
-    )
+    );
 }
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-        marginTop: theme.spacing(4),
-        background: "#FCF6B1",
-        color: theme.palette.secondary.main,
-        fontSize: "1.2rem",
-        maxWidth: "500px",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        padding: theme.spacing(4),
-        "& button": {
-            backgroundColor: theme.palette.primary.main,
-            color: "#FFF",
-            fontWeight: 900,
-            fontSize: "1.2rem",
-            marginTop: theme.spacing(4),
-        },
-        "& button:hover": {
-            backgroundColor: theme.palette.secondary.main,
-            color: "#FFF",
-        },
-    },
-    section: {
-        minHeight: "100vh",
-    },
-    sectionDark: {
-        background: "#424242",
-        color: "#FFF",
-    },
-    sectionContent: {
-        maxWidth: "80vw",
-        margin: "0 auto",
-        padding: theme.spacing(4),
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-    },
-    selection: {
-        "& h5": {
-            marginTop: theme.spacing(1),
-        },
-        [theme.breakpoints.down("xs")]: {
-            textAlign: "center",
-        },
-    },
-    radios: {
-        marginTop: theme.spacing(1),
-        [theme.breakpoints.down("xs")]: {
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
-        },
-    },
-    contactForm: {
-        display: "flex",
-        flexDirection: "column",
-    },
-}));
 
 export default Contact;

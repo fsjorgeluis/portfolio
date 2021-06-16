@@ -1,5 +1,6 @@
-import { Card, CardContent, CardMedia, Grid, Link, makeStyles, Typography } from "@material-ui/core";
-import { mockData } from "../../data";
+import { Card, CardContent, CardMedia, Grid, Link, Typography } from "@material-ui/core";
+import { useStyles } from "./styles";
+import { myWork } from "../../data";
 
 const Works = ({ id, title, dark }) => {
     const classes = useStyles();
@@ -9,7 +10,7 @@ const Works = ({ id, title, dark }) => {
                 <Typography variant="h3">{title}</Typography>
                 <Grid container className={classes.grid}>
                     {
-                        mockData.map(({ title, src, link }, index) => (
+                        myWork.map(({ title, src, link }, index) => (
                             <Grid item key={index} xs={12} sm={6} md={4}>
                                 <Card className={classes.card}>
                                     <CardMedia image={src} className={classes.cardMedia} title="hero-image" />
@@ -25,37 +26,7 @@ const Works = ({ id, title, dark }) => {
                 </Grid>
             </div>
         </div>
-    )
+    );
 }
-
-const useStyles = makeStyles((theme) => ({
-    section: {
-        minHeight: "100vh",
-    },
-    sectionDark: {
-        background: theme.palette.secondary.main,
-        color: "#FFF",
-    },
-    sectionContent: {
-        maxWidth: "80vw",
-        margin: "0 auto",
-        padding: theme.spacing(4),
-    },
-    grid: {
-        marginTop: theme.spacing(10),
-    },
-    card: {
-        maxWidth: 345,
-        minHeight: 275,
-        margin: theme.spacing(3),
-    },
-    cardMedia: {
-        height: 0,
-        paddingTop: "56.25%" // 16:9
-    },
-    cardContent: {
-        textAlign: "center",
-    },
-}));
 
 export default Works;

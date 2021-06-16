@@ -1,5 +1,6 @@
-import { makeStyles, Typography } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import Aptitudes from "../Aptitudes";
+import { useStyles } from "./styles";
 
 
 const Personality = ({ id, title, dark }) => {
@@ -13,20 +14,5 @@ const Personality = ({ id, title, dark }) => {
         </div>
     )
 }
-
-const useStyles = makeStyles((theme) => ({
-    section: {
-        minHeight: "100vh",
-    },
-    sectionDark: {
-        background: theme.palette.secondary.main,
-        color: "#FFF",
-    },
-    sectionContent: {
-        maxWidth: "80vw",
-        margin: "0 auto",
-        paddingTop: theme.spacing(4),
-    },
-}));
 
 export default Personality;

@@ -133,8 +133,8 @@ export const techs = [
     },
     {
         src: html5Icon,
-        title: "HTML5, everybody shoud know this :D",
-        stars: 4,
+        title: "HTML5, everybody should know this :D",
+        stars: 5,
     },
     {
         src: css3Icon,

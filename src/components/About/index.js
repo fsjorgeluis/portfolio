@@ -3,12 +3,11 @@ import Typewriter from 'typewriter-effect';
 import me from '../../images/me.jpg';
 import cv from '../../images/test-cv.pdf';
 
-const About = ({ id, title, dark }) => {
+const About = ({ id, dark }) => {
     const classes = useStyles();
     return (
         <div className={`${classes.section} ${dark && classes.sectionDark}`}>
             <div className={classes.sectionContent} id={id}>
-                {/* <Typography variant="h3">{title}</Typography> */}
 
                 <Card className={classes.card}>
                     <CardMedia image={me} className={classes.cardMedia} title="avatar" />
@@ -16,10 +15,10 @@ const About = ({ id, title, dark }) => {
                         <Typewriter
                             onInit={(typewriter) => {
                                 typewriter
-                                    .typeString("<span style='font-size: 2rem; font-weight: bold; color: #F72C25'>What's up! yo,</span>")
+                                    .typeString("<span style='font-size: 2rem; font-weight: bold; color: #FF7043'>What's up! yo,</span>")
                                     .typeString('<br>')
                                     .pauseFor(300)
-                                    .typeString("<span style='font-size: 2rem; font-weight: bold; color: #F72C25'>I'm Jorge Fernández.</span>")
+                                    .typeString("<span style='font-size: 2rem; font-weight: bold; color: #FF7043'>I'm Jorge Fernández.</span>")
                                     .typeString('<br>')
                                     .pauseFor(300)
                                     .typeString("<span style='font-size: 1.2rem; font-weight: bold'>And I ❤️ doing stuff as fullstack developer!</span>")
@@ -57,8 +56,8 @@ const useStyles = makeStyles((theme) => ({
         minHeight: "100vh",
     },
     sectionDark: {
-        background: "#424242",
-        color: "#fff",
+        background: theme.palette.secondary.main,
+        color: "#FFF",
     },
     sectionContent: {
         maxWidth: "80vw",
@@ -101,19 +100,16 @@ const useStyles = makeStyles((theme) => ({
             bottom: "2rem",
             right: "2rem"
         },
-        backgroundColor: "tomato",
+        backgroundColor: theme.palette.primary.main,
         padding: theme.spacing(3),
         "&:hover": {
-            backgroundColor: "#FFF",
+            backgroundColor: theme.palette.secondary.main,
         },
         "& a": {
             color: "#FFF",
             textDecoration: "none",
             fontWeight: 900,
         },
-        "& a:hover": {
-            color: "tomato"
-        }
     }
 }));
 

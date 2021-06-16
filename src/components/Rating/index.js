@@ -5,7 +5,7 @@ import FreeBreakfastTwoToneIcon from '@material-ui/icons/FreeBreakfastTwoTone';
 
 const StyledRating = withStyles({
     iconFilled: {
-        color: '#F7B32B',
+        color: "#F7B32B",
     },
 })(Rating);
 

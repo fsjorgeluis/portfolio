@@ -93,7 +93,7 @@ const Aptitudes = () => {
 
 const useStyles = makeStyles((theme) => ({
     timeline: {
-        paddingTop: "2vh",
+        paddingTop: theme.spacing(2),
     },
     customLogo: {
         width: "35px",

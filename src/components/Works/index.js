@@ -14,7 +14,7 @@ const Works = ({ id, title, dark }) => {
                                 <Card className={classes.card}>
                                     <CardMedia image={src} className={classes.cardMedia} title="hero-image" />
                                     <CardContent>
-                                        <Link href={link} color="primary" target="_blank" rel="noopener noreferrer">
+                                        <Link href={link} color="secondary" target="_blank" rel="noopener noreferrer">
                                             {title}
                                         </Link>
                                     </CardContent>
@@ -33,8 +33,8 @@ const useStyles = makeStyles((theme) => ({
         minHeight: "100vh",
     },
     sectionDark: {
-        background: "#424242",
-        color: "#fff",
+        background: theme.palette.secondary.main,
+        color: "#FFF",
     },
     sectionContent: {
         maxWidth: "80vw",

@@ -109,7 +109,7 @@ const useStyles = makeStyles((theme) => ({
         padding: "6px 16px",
     },
     timeline: {
-        paddingTop: "2vh",
+        paddingTop: theme.spacing(2),
     },
 }));
 

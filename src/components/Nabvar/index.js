@@ -147,14 +147,14 @@ const useStyles = makeStyles((theme) => ({
             display: "none"
         },
         "& a": {
-            color: "#2D1E2F", // Purple Dark
+            color: theme.palette.secondary.main, // Purple Dark
             fontSize: "1.4rem",
             fontWeight: "bold",
             marginLeft: theme.spacing(3)
         },
         "& a:hover": {
             cursor: "pointer",
-            color: "#F72C25", // Orange like tomato
+            color: theme.palette.primary.main, // Orange like tomato
             borderBottom: "3px solid #F72C25", // Orange like tomato
         }
     },
@@ -162,7 +162,7 @@ const useStyles = makeStyles((theme) => ({
         display: "none",
         [theme.breakpoints.down("sm")]: {
             display: "block",
-            color: "#F72C25", // Orange like tomato
+            color: theme.palette.secondary.main, // Orange like tomato
             position: "absolute",
             right: 10,
         }
@@ -175,16 +175,16 @@ const useStyles = makeStyles((theme) => ({
         "& h5": {
             margin: theme.spacing(10, 0, 0, 0),
             fontSize: "1.4rem",
-            color: "#2D1E2F", // Purple Dark
+            color: theme.palette.secondary.main, // Purple Dark
             fontWeight: "bold"
         },
         "& h5:hover": {
-            color: "#F72C25", // Orange like tomato
+            color: theme.palette.primary.main, // Orange like tomato
             cursor: "pointer"
         }
     },
     drawerCancelButton: {
-        color: "#F72C25", // Orange like tomato
+        color: theme.palette.primary.main, // Orange like tomato
         position: "absolute",
         right: 10,
     }

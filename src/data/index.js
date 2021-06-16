@@ -31,6 +31,9 @@ import handyman from "../images/works/handyman.jpg";
 import rockOn from "../images/works/rockon.jpg";
 import finacont from "../images/works/finacont.jpg";
 import codening from "../images/works/codeningspa.jpg";
+import nodeMicroservice from "../images/works/nodemicroservice.png";
+import nestjsBlogApi from "../images/works/nestjsblog.png";
+import ecommerceMERN from "../images/works/ecommerce mern.png";
 
 
 export const skills = [
@@ -183,17 +186,17 @@ export const myWork = [
     },
     {
         title: "NodeJs Micro service mailer",
-        src: codening,
+        src: nodeMicroservice,
         link: "https://github.com/fsjorgeluis/micromailer",
     },
     {
         title: "NestJs blog api (TypeScript)",
-        src: codening,
+        src: nestjsBlogApi,
         link: "https://github.com/fsjorgeluis/bloggy",
     },
     {
         title: "ReactJs+Express e-commerce",
-        src: codening,
+        src: ecommerceMERN,
         link: "https://github.com/fsjorgeluis/codeshop",
     },
 ];

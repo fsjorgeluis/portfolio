@@ -190,12 +190,12 @@ export const myWork = [
         link: "https://github.com/fsjorgeluis/micromailer",
     },
     {
-        title: "NestJs blog api (TypeScript)",
+        title: "(TypeScript) NestJs + TypeORM (MySQL) Blog API",
         src: nestjsBlogApi,
         link: "https://github.com/fsjorgeluis/bloggy",
     },
     {
-        title: "ReactJs+Express e-commerce",
+        title: "MongoDB, Express, ReactJs NodeJs (MERN) e-commerce",
         src: ecommerceMERN,
         link: "https://github.com/fsjorgeluis/codeshop",
     },

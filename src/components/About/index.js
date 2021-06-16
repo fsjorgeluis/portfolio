@@ -1,7 +1,7 @@
-import { Button, Card, CardActions, CardContent, CardMedia, makeStyles, Typography } from "@material-ui/core";
+import { Button, Card, CardActions, CardContent, CardMedia, Container, makeStyles, Typography } from "@material-ui/core";
 import Typewriter from 'typewriter-effect';
 import me from '../../images/me.jpg';
-import cv from '../../images/test-cv.pdf';
+import cv from '../../images/cv.pdf';
 
 const About = ({ id, dark }) => {
     const classes = useStyles();
@@ -12,30 +12,31 @@ const About = ({ id, dark }) => {
                 <Card className={classes.card}>
                     <CardMedia image={me} className={classes.cardMedia} title="avatar" />
                     <CardContent className={classes.cardContent}>
-                        <Typewriter
-                            onInit={(typewriter) => {
-                                typewriter
-                                    .typeString("<span style='font-size: 2rem; font-weight: bold; color: #FF7043'>What's up! yo,</span>")
-                                    .typeString('<br>')
-                                    .pauseFor(300)
-                                    .typeString("<span style='font-size: 2rem; font-weight: bold; color: #FF7043'>I'm Jorge Fernández.</span>")
-                                    .typeString('<br>')
-                                    .pauseFor(300)
-                                    .typeString("<span style='font-size: 1.2rem; font-weight: bold'>And I ❤️ doing stuff as fullstack developer!</span>")
-                                    .pauseFor(2500)
-                                    .deleteAll()
-                                    .start();
-                            }}
-                            options={{
-                                loop: true,
-                                cursor: "__"
-                            }}
-                        />
-
-                        <Typography variant="h6" color="textSecondary">
-                            C'mon, scroll down and know more about me, or if you are lazy one
-                            download my cv <a href={cv} download>clicking here</a> or obviously on the right side bottom corner button. Cheers 😄
-                        </Typography>
+                        <Container fixed className={classes.cardContentContainer}>
+                            <Typewriter
+                                onInit={(typewriter) => {
+                                    typewriter
+                                        .typeString("<span style='font-size: 2rem; font-weight: bold; color: #FF7043'>What's up! yo,</span>")
+                                        .typeString('<br>')
+                                        .pauseFor(300)
+                                        .typeString("<span style='font-size: 2rem; font-weight: bold; color: #FF7043'>I'm Jorge Fernández.</span>")
+                                        .typeString('<br>')
+                                        .pauseFor(300)
+                                        .typeString("<span style='font-size: 1.2rem; font-weight: bold'>And I ❤️ doing stuff as fullstack developer!</span>")
+                                        .pauseFor(2500)
+                                        .deleteAll()
+                                        .start();
+                                }}
+                                options={{
+                                    loop: true,
+                                    cursor: "_"
+                                }}
+                            />
+                            <Typography variant="h6" color="textSecondary">
+                                C'mon, scroll down and know more about me, or if you are lazy one
+                                download my cv <a href={cv} download>clicking here</a> or obviously on the right side bottom corner button. Cheers 😄
+                            </Typography>
+                        </Container>
                     </CardContent>
                     <CardActions>
                         <Button variant="contained" className={classes.downloadButton}>
@@ -68,28 +69,51 @@ const useStyles = makeStyles((theme) => ({
         height: "70vh",
         display: "flex",
         marginTop: theme.spacing(6),
-        position: "relative"
+        position: "relative",
     },
     cardMedia: {
-        width: "400px", //250px
+        width: "400px", // 250px
         height: "auto",
         [theme.breakpoints.down("xs")]: {
             display: "none"
         },
+        [theme.breakpoints.down("sm")]: {
+            width: "200px",// test
+            maxWidth: "400px",
+            height: "auto",
+        },
         objectFit: "cover",
         borderRadius: "10px",
-        margin: theme.spacing(5)
+        margin: theme.spacing(5),
     },
     cardContent: {
         marginTop: theme.spacing(2),
+        [theme.breakpoints.down("xs")]: {
+            textAlign: "center",
+        },
         "& h6": {
             marginTop: theme.spacing(6),
+            paddingRight: theme.spacing(6),
             [theme.breakpoints.down("xs")]: {
-                display: "none"
-            }
+                display: "none",
+            },
+            [theme.breakpoints.down("sm")]: {
+                display: "none",
+            },
+        },
+    },
+    cardContentContainer: {
+        [theme.breakpoints.down("lg")]: {
+            width: "55vw",
+        },
+        [theme.breakpoints.down("md")]: {
+            width: "45vw",
+        },
+        [theme.breakpoints.down("sm")]: {
+            width: "45vw", //35vw
         },
         [theme.breakpoints.down("xs")]: {
-            textAlign: "center"
+            width: "70vw",
         },
     },
     downloadButton: {
@@ -98,7 +122,7 @@ const useStyles = makeStyles((theme) => ({
         right: "2rem",
         [theme.breakpoints.down("sm")]: {
             bottom: "2rem",
-            right: "2rem"
+            right: "2rem",
         },
         backgroundColor: theme.palette.primary.main,
         padding: theme.spacing(3),

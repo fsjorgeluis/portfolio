@@ -130,7 +130,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center"
     },
     logo: {
-        height: "3.7rem",
+        height: "3.5rem",
         objectFit: "contain",
         "&:hover": {
             cursor: "pointer"

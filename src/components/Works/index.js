@@ -13,7 +13,7 @@ const Works = ({ id, title, dark }) => {
                             <Grid item key={index} xs={12} sm={6} md={4}>
                                 <Card className={classes.card}>
                                     <CardMedia image={src} className={classes.cardMedia} title="hero-image" />
-                                    <CardContent>
+                                    <CardContent className={classes.cardContent}>
                                         <Link href={link} color="secondary" target="_blank" rel="noopener noreferrer">
                                             {title}
                                         </Link>
@@ -52,6 +52,9 @@ const useStyles = makeStyles((theme) => ({
     cardMedia: {
         height: 0,
         paddingTop: "56.25%" // 16:9
+    },
+    cardContent: {
+        textAlign: "center",
     },
 }));
 

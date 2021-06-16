@@ -1,34 +1,39 @@
-
+import kriff from "../images/works/kriff.jpg";
+import peyp from "../images/works/peyp.jpg";
+import handyman from "../images/works/handyman.jpg";
+import rockOn from "../images/works/rockon.jpg";
+import finacont from "../images/works/finacont.jpg";
+import codening from "../images/works/codeningspa.jpg";
 
 export const mockData = [
     {
-        title: "Material landing page",
-        src: "",
+        title: "Custom PHP Landing page with material look",
+        src: kriff,
         link: "https://kriff.cl",
     },
     {
-        title: "Material landing page",
-        src: "",
+        title: "Common PHP-wordpress website with material look",
+        src: peyp,
         link: "https://www.peyp-ingenieria.cl/",
     },
     {
-        title: "Material landing page",
-        src: "",
+        title: "Custom PHP web page",
+        src: handyman,
         link: "https://handymanlecheria.com/",
     },
     {
-        title: "Material landing page",
-        src: "",
+        title: "Common PHP-prestashop ecommerce",
+        src: rockOn,
         link: "https://liveloverockon.com",
     },
     {
-        title: "Material landing page",
-        src: "",
+        title: "Simple HTML / CSS web page with Material Look",
+        src: finacont,
         link: "https://finacontspa.cl",
     },
     {
-        title: "Material landing page",
-        src: "",
+        title: "Coorporative look web site",
+        src: codening,
         link: "https://codeningspa.com",
     },
     {

@@ -1,7 +1,7 @@
-import Box from '@material-ui/core/Box';
 import { withStyles } from '@material-ui/core';
-import Rating from '@material-ui/lab/Rating';
+import Box from '@material-ui/core/Box';
 import FreeBreakfastTwoToneIcon from '@material-ui/icons/FreeBreakfastTwoTone';
+import Rating from '@material-ui/lab/Rating';
 
 const StyledRating = withStyles({
     iconFilled: {
@@ -9,7 +9,7 @@ const StyledRating = withStyles({
     },
 })(Rating);
 
-const StartRating = ({ stars, cups }) => {
+const StartRating = ({ stars, cups = false }) => {
     return (
         <Box component="fieldset" borderColor="transparent">
             {

@@ -8,6 +8,8 @@ import positiveIcon from "../../images/aptitudes/positive-thinking.png";
 import comunicationIcon from "../../images/aptitudes/conversation.png";
 import leaderIcon from "../../images/aptitudes/leadership.png";
 import teamworkIcon from "../../images/aptitudes/united.png";
+import responsabilityIcon from "../../images/aptitudes/responsibility.png";
+import honestityIcon from "../../images/aptitudes/honest.png";
 import learnIcon from "../../images/aptitudes/learning.png";
 import coffeeIcon from "../../images/aptitudes/coffee-cup.png";
 
@@ -49,6 +51,16 @@ const Aptitudes = () => {
         {
             src: teamworkIcon,
             title: "Teamwork",
+            stars: 5,
+        },
+        {
+            src: responsabilityIcon,
+            title: "Responsability",
+            stars: 5,
+        },
+        {
+            src: honestityIcon,
+            title: "Honestity",
             stars: 5,
         },
         {

@@ -33,7 +33,7 @@ import finacont from "../images/works/finacont.jpg";
 import codening from "../images/works/codeningspa.jpg";
 import nodeMicroservice from "../images/works/nodemicroservice.png";
 import nestjsBlogApi from "../images/works/nestjsblog.png";
-import ecommerceMERN from "../images/works/ecommerce mern.png";
+import ecommerceMERN from "../images/works/ecommercemern.png";
 
 
 export const skills = [

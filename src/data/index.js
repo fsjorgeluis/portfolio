@@ -159,6 +159,21 @@ export const techs = [
 
 export const myWork = [
     {
+        title: "NodeJs Micro service mailer",
+        src: nodeMicroservice,
+        link: "https://github.com/fsjorgeluis/micromailer",
+    },
+    {
+        title: "(TypeScript) NestJs + TypeORM (MySQL) Blog API (in progress)",
+        src: nestjsBlogApi,
+        link: "https://github.com/fsjorgeluis/bloggy",
+    },
+    {
+        title: "MongoDB, Express, ReactJs NodeJs (MERN) e-commerce",
+        src: ecommerceMERN,
+        link: "https://github.com/fsjorgeluis/codeshop",
+    },
+    {
         title: "Custom PHP Landing page with material look",
         src: kriff,
         link: "https://kriff.cl",
@@ -207,20 +222,5 @@ export const myWork = [
         title: "PHP web site with coorporative look",
         src: codening,
         link: "https://codeningspa.com",
-    },
-    {
-        title: "NodeJs Micro service mailer",
-        src: nodeMicroservice,
-        link: "https://github.com/fsjorgeluis/micromailer",
-    },
-    {
-        title: "(TypeScript) NestJs + TypeORM (MySQL) Blog API",
-        src: nestjsBlogApi,
-        link: "https://github.com/fsjorgeluis/bloggy",
-    },
-    {
-        title: "MongoDB, Express, ReactJs NodeJs (MERN) e-commerce",
-        src: ecommerceMERN,
-        link: "https://github.com/fsjorgeluis/codeshop",
     },
 ];

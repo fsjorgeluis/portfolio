@@ -16,12 +16,12 @@ import { useStyles } from "./styles";
 
 
 const Contact = ({ id, title, dark }) => {
-    const [value, setValue] = useState("Hello");
+    const [radioValue, setRadioValue] = useState("Hello");
     const [toastOpen, setToastOpen] = useState(false);
     const classes = useStyles();
 
     const handleChange = (e) => {
-        setValue(e.target.value);
+        setRadioValue(e.target.value);
     };
 
     const handleClose = (event, reason) => {
@@ -50,7 +50,8 @@ const Contact = ({ id, title, dark }) => {
         onSubmit: async values => {
             try {
                 const { data } = await axios.post('http://localhost:5000/send', values, config);
-                if (data.success) setToastOpen(true)
+                if (data.success) setToastOpen(true);
+                formik.resetForm();
                 // alert(JSON.stringify(data, null, 2));
             } catch (error) {
                 alert(JSON.stringify(error));
@@ -70,7 +71,7 @@ const Contact = ({ id, title, dark }) => {
                                 <span>Talk to me</span>
                                 <Radio
                                     value="Hello"
-                                    checked={value === "Hello"}
+                                    checked={radioValue === "Hello"}
                                     color="secondary"
                                     onChange={handleChange}
                                 />
@@ -78,7 +79,7 @@ const Contact = ({ id, title, dark }) => {
                                 <span>Get a Quote</span>
                                 <Radio
                                     value="Get a quote"
-                                    checked={value === "Get a quote"}
+                                    checked={radioValue === "Get a quote"}
                                     color="secondary"
                                     onChange={handleChange}
                                 />
@@ -102,7 +103,7 @@ const Contact = ({ id, title, dark }) => {
                                 helperText={formik.errors.email ? formik.errors.email.message : null}
                             />
                             {
-                                value === "Get a quote" ? (
+                                radioValue === "Get a quote" ? (
                                     <>
                                         <TextField
                                             name="services"

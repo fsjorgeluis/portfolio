@@ -30,6 +30,10 @@ import peyp from "../images/works/peyp.jpg";
 import handyman from "../images/works/handyman.jpg";
 import rockOn from "../images/works/rockon.jpg";
 import finacont from "../images/works/finacont.jpg";
+import inelca from "../images/works/inelcacl.jpg";
+import gasfiteria from "../images/works/gasfiteria.jpg";
+import eventosQuijon from "../images/works/quijon.jpg";
+import tecnoSmart from "../images/works/tecnoSmart.jpg";
 import codening from "../images/works/codeningspa.jpg";
 import nodeMicroservice from "../images/works/nodemicroservice.png";
 import nestjsBlogApi from "../images/works/nestjsblog.png";
@@ -175,12 +179,32 @@ export const myWork = [
         link: "https://liveloverockon.com",
     },
     {
-        title: "Simple HTML / CSS web page with Material Look",
+        title: "Simple HTML / CSS web site with Material Look",
         src: finacont,
         link: "https://finacontspa.cl",
     },
     {
-        title: "PHP web page with coorporative look",
+        title: "Common PHP-wordpres web site",
+        src: inelca,
+        link: "https://inelcachile.cl/",
+    },
+    {
+        title: "Common PHP-wordpres web site",
+        src: gasfiteria,
+        link: "https://gasfiteriaelite.cl/",
+    },
+    {
+        title: "Common PHP-wordpres web site",
+        src: eventosQuijon,
+        link: "https://eventosquijon.cl/",
+    },
+    {
+        title: "Common PHP-wordpres web site",
+        src: tecnoSmart,
+        link: "https://solucionestecnosmart.cl/",
+    },
+    {
+        title: "PHP web site with coorporative look",
         src: codening,
         link: "https://codeningspa.com",
     },

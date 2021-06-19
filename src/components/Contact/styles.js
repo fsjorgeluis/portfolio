@@ -28,7 +28,7 @@ export const useStyles = makeStyles((theme) => ({
         minHeight: "100vh",
     },
     sectionDark: {
-        background: "#424242",
+        background: theme.palette.secondary.main,
         color: "#FFF",
     },
     sectionContent: {

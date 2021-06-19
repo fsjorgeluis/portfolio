@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import axios from 'axios';
 import {
     Button,
+    CircularProgress,
     IconButton,
     Paper,
     Radio,
@@ -18,6 +19,7 @@ import { useStyles } from "./styles";
 const Contact = ({ id, title, dark }) => {
     const [radioValue, setRadioValue] = useState("Hello");
     const [toastOpen, setToastOpen] = useState(false);
+    const [loading, setLoading] = useState(false);
     const classes = useStyles();
 
     const handleChange = (e) => {
@@ -48,9 +50,13 @@ const Contact = ({ id, title, dark }) => {
         },
         validate,
         onSubmit: async values => {
+            setLoading(true);
             try {
                 const { data } = await axios.post('https://micro-mailer.herokuapp.com/send', values, config);
-                if (data.success) setToastOpen(true);
+                if (data.success) {
+                    setToastOpen(true);
+                    setLoading(false);
+                }
                 formik.resetForm();
                 // alert(JSON.stringify(data, null, 2));
             } catch (error) {
@@ -135,7 +141,13 @@ const Contact = ({ id, title, dark }) => {
                                 multiline
                                 rowsMax={4}
                             />
-                            <Button type="submit" variant="contained">Submit</Button>
+                            <Button
+                                type="submit"
+                                variant="contained"
+                                disabled={loading}
+                            >
+                                {loading ? <CircularProgress size={24} /> : 'Send!'}
+                            </Button>
                         </form>
                     </Paper>
                 </div>

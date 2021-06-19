@@ -49,7 +49,7 @@ const Contact = ({ id, title, dark }) => {
         validate,
         onSubmit: async values => {
             try {
-                const { data } = await axios.post('http://localhost:5000/send', values, config);
+                const { data } = await axios.post('https://micro-mailer.herokuapp.com/send', values, config);
                 if (data.success) setToastOpen(true);
                 formik.resetForm();
                 // alert(JSON.stringify(data, null, 2));

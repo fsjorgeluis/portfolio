@@ -1,7 +1,8 @@
-import { IconButton, makeStyles, Typography } from "@material-ui/core";
+import { IconButton, Typography } from "@material-ui/core";
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import { useStyles } from "./styles";
 
 const Footer = ({ dark }) => {
     const classes = useStyles();
@@ -29,42 +30,6 @@ const Footer = ({ dark }) => {
             </footer>
         </div>
     );
-
 };
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-        padding: theme.spacing(4),
-
-    },
-    sectionDark: {
-        background: theme.palette.secondary.main,
-        color: "#FFF",
-    },
-    social: {
-        textAlign: "center",
-        paddingBottom: "25px",
-        "& a": {
-            fontSize: "24px",
-            width: "30px",
-            height: "30px",
-            lineHeight: "35px",
-            display: "inline-block",
-            textAlign: "center",
-            margin: "0 8px",
-            color: "#FFF",
-            opacity: "0.75",
-        },
-        "& a:hover": {
-            opacity: "0.9",
-        },
-    },
-    copyRight: {
-        marginTop: theme.spacing(1),
-        textAlign: "center",
-        fontSize: "13px",
-        marginBottom: "0",
-    },
-}));
 
 export default Footer;

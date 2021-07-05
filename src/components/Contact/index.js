@@ -61,7 +61,7 @@ const Contact = ({ id, title, dark }) => {
                 // alert(JSON.stringify(data, null, 2));
             } catch (error) {
                 // alert(JSON.stringify(error));
-                alert("Oh no!, we got a problem while sending the message.");
+                alert("Oh no!, we got a problem!.");
             }
         },
     });

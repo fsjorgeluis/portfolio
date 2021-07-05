@@ -159,14 +159,14 @@ export const techs = [
 
 export const myWork = [
     {
-        title: "NodeJs Micro service mailer",
+        title: "NodeJs service mailer",
         src: nodeMicroservice,
         link: "https://github.com/fsjorgeluis/micromailer",
     },
     {
-        title: "(TypeScript) NestJs + TypeORM (MySQL) Blog API (in progress)",
+        title: "(TypeScript) NestJs + TypeORM (PostgreSQL) Blog API (in progress)",
         src: nestjsBlogApi,
-        link: "https://github.com/fsjorgeluis/bloggy",
+        link: "https://github.com/fsjorgeluis/protoblog",
     },
     {
         title: "MongoDB, Express, ReactJs NodeJs (MERN) e-commerce",

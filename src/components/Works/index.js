@@ -37,7 +37,7 @@ const Works = ({ id, title, dark }) => {
                                                 </>
                                             ) : (
                                                 <Link href={link} color="secondary" target="_blank" rel="noopener noreferrer">
-                                                    { title}
+                                                    {title}
                                                 </Link>
                                             )
                                         }

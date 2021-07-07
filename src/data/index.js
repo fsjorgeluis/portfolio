@@ -36,6 +36,7 @@ import eventosQuijon from "../images/works/quijon.jpg";
 import tecnoSmart from "../images/works/tecnoSmart.jpg";
 import codening from "../images/works/codeningspa.jpg";
 import nodeMicroservice from "../images/works/nodemicroservice.png";
+import passwordGenerator from "../images/works/PasswordGenerator.png";
 import nestjsBlogApi from "../images/works/nestjsblog.png";
 import ecommerceMERN from "../images/works/ecommercemern.png";
 
@@ -162,6 +163,11 @@ export const myWork = [
         title: "NodeJs service mailer",
         src: nodeMicroservice,
         link: "https://github.com/fsjorgeluis/micromailer",
+    },
+    {
+        title: "NodeJs (TypeScript) password generator / also builded as npm package :D",
+        src: passwordGenerator,
+        link: "https://github.com/fsjorgeluis/password-generator",
     },
     {
         title: "(TypeScript) NestJs + TypeORM (PostgreSQL) Blog API (in progress)",

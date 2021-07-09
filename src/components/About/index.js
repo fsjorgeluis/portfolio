@@ -32,10 +32,10 @@ const About = ({ id, dark }) => {
                     <CardContent className={classes.cardContent}>
                         <Container maxWidth="lg" className={classes.cardContentContainer}>
                             <Container fixed className={classes.cardContentContainerHeader}>
-                                <Typography variant="h1">
+                                <Typography variant="h2">
                                     {t('aboutSection.title1')}
                                 </Typography>
-                                <Typography variant="h1">
+                                <Typography variant="h2">
                                     {t('aboutSection.title2')}
                                 </Typography>
                                 <Typewriter

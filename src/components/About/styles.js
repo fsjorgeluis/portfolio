@@ -36,7 +36,6 @@ export const useStyles = makeStyles((theme) => ({
         margin: theme.spacing(5),
     },
     cardContent: {
-
         marginTop: theme.spacing(2),
         [theme.breakpoints.down("xs")]: {
             textAlign: "center",
@@ -66,7 +65,7 @@ export const useStyles = makeStyles((theme) => ({
         },
     },
     cardContentContainerHeader: {
-        "& h1": {
+        "& h2": {
             fontSize: '2rem',
             fontWeight: 'bold',
             color: theme.palette.primary.main,

@@ -110,7 +110,7 @@ export const useStyles = makeStyles((theme) => ({
             '& > *': {
                 margin: theme.spacing(1),
                 padding: "1px",
-                backgroundColor: "white"
+                backgroundColor: "#FFFFFF"
             },
         },
         [theme.breakpoints.up("sm")]: {
@@ -119,7 +119,7 @@ export const useStyles = makeStyles((theme) => ({
             '& > *': {
                 margin: theme.spacing(1),
                 padding: "5px",
-                backgroundColor: "white"
+                backgroundColor: "#FFFFFF"
             },
         },
     },

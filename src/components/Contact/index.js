@@ -17,20 +17,20 @@ import { useStyles } from "./styles";
 
 
 const Contact = ({ id, title, dark }) => {
-      
+
     const initialState = {
-        redioValue : "Hello",
+        redioValue: "Hello",
         toastOpen: false,
         loading: false
     }
-    
-    const [ state, setState ] useState(initialState);  
-    
-    
+
+    const [state, setState] = useState(initialState);
+
+
     const classes = useStyles();
 
     const handleChange = (e) => {
-        setRadioValue(e.target.value);
+        setState({ redioValue: e.target.value });
     };
 
     const handleClose = (event, reason) => {
@@ -38,7 +38,7 @@ const Contact = ({ id, title, dark }) => {
             return;
         }
 
-        setToastOpen(false);
+        setState({ toastOpen: false });
     };
 
     const config = {
@@ -57,12 +57,12 @@ const Contact = ({ id, title, dark }) => {
         },
         validate,
         onSubmit: async values => {
-            setLoading(true);
+            setState({ loading: true });
             try {
                 const { data } = await axios.post('https://micro-mailer.herokuapp.com/send', values, config);
                 if (data.success) {
-                    setToastOpen(true);
-                    setLoading(false);
+                    setState({ toastOpen: true });
+                    setState({ loading: false });
                 }
                 formik.resetForm();
                 // alert(JSON.stringify(data, null, 2));
@@ -85,7 +85,7 @@ const Contact = ({ id, title, dark }) => {
                                 <span>Talk to me</span>
                                 <Radio
                                     value="Hello"
-                                    checked={ state.radioValue === "Hello"}
+                                    checked={state.radioValue === "Hello"}
                                     color="secondary"
                                     onChange={handleChange}
                                 />

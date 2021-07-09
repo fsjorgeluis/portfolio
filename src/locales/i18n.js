@@ -51,7 +51,7 @@ i18n
                         card4: "TypeScript para mejor desarrollo en Js",
                         card5: "Graphql para mejor manejo de la data y evitar la sobrecarga durante el retorno de las peticiones a las apis",
                         card6: "RectJs con clases y hooks, haciendo cosas funcionales sobre la web",
-                        card7: "Redux para ReactJs, realizando una útil unica fuente de la verdad",
+                        card7: "Redux para ReactJs, elaborando una útil y única fuente de la verdad",
                         card8: "HTML5, todo el mundo debería conocer de html5 :D",
                         card9: "CSS3 tradicional al igual que librerías y frameworks como tailwind y bootstrap",
                         card10: "PHP tradicional y frameworks comunes como laravel y cms como WordPress",

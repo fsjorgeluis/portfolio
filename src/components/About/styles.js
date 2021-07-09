@@ -80,12 +80,6 @@ export const useStyles = makeStyles((theme) => ({
     cardContentContainerSocial: {
         backgroundColor: "#e3e3e3",
         borderRadius: '10px',
-        "& svg": {
-            color: theme.palette.primary.main,
-        },
-        "& svg:hover": {
-            color: theme.palette.secondary.main,
-        },
         [theme.breakpoints.between("xs", "sm")]: {
             minHeight: '15vh',
             marginTop: '10px',
@@ -105,12 +99,22 @@ export const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
+        "& svg": {
+            fontSize: "1.7rem",
+            color: theme.palette.primary.main,
+        },
+        "& svg:hover": {
+            color: theme.palette.secondary.main,
+        },
+        "& div": {
+            backgroundColor: "#FFFFFF",
+        },
         [theme.breakpoints.between("xs", "sm")]: {
             height: '10vh',
             '& > *': {
                 margin: theme.spacing(1),
                 padding: "1px",
-                backgroundColor: "#FFFFFF"
+                // backgroundColor: "#FFFFFF"
             },
         },
         [theme.breakpoints.up("sm")]: {
@@ -119,7 +123,7 @@ export const useStyles = makeStyles((theme) => ({
             '& > *': {
                 margin: theme.spacing(1),
                 padding: "5px",
-                backgroundColor: "#FFFFFF"
+                // backgroundColor: "#FFFFFF"
             },
         },
     },

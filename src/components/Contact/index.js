@@ -22,7 +22,7 @@ const Contact = ({ id, title, dark }) => {
         radioValue: "Hello",
         toastOpen: false,
         loading: false
-    }
+    };
 
     const [state, setState] = useState(initialState);
 
@@ -61,10 +61,10 @@ const Contact = ({ id, title, dark }) => {
             setState({ loading: true });
             try {
                 const { data } = await axios.post('https://micro-mailer.herokuapp.com/send', values, config);
-
                 if (data.success) {
                     setState({ toastOpen: true });
                     setState({ loading: false });
+                    console.log(state.toastOpen)
                 }
                 formik.resetForm();
                 // alert(JSON.stringify(data, null, 2));

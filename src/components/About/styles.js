@@ -36,6 +36,7 @@ export const useStyles = makeStyles((theme) => ({
         margin: theme.spacing(5),
     },
     cardContent: {
+
         marginTop: theme.spacing(2),
         [theme.breakpoints.down("xs")]: {
             textAlign: "center",
@@ -43,15 +44,14 @@ export const useStyles = makeStyles((theme) => ({
         "& h6": {
             marginTop: theme.spacing(6),
             paddingRight: theme.spacing(6),
-            [theme.breakpoints.down("xs")]: {
-                display: "none",
-            },
-            [theme.breakpoints.down("sm")]: {
+            [theme.breakpoints.between("xs", "md")]: {
                 display: "none",
             },
         },
     },
     cardContentContainer: {
+        minHeight: '42vh',
+        padding: '5px',
         [theme.breakpoints.down("lg")]: {
             width: "55vw",
         },
@@ -65,11 +65,75 @@ export const useStyles = makeStyles((theme) => ({
             width: "70vw",
         },
     },
+    cardContentContainerHeader: {
+        "& h1": {
+            fontSize: '2rem',
+            fontWeight: 'bold',
+            color: theme.palette.primary.main,
+        },
+        [theme.breakpoints.between("xs", "sm")]: {
+            height: '33vh',
+        },
+        [theme.breakpoints.up("md")]: {
+            height: '30vh',
+        },
+    },
+    cardContentContainerSocial: {
+        backgroundColor: "#e3e3e3",
+        borderRadius: '10px',
+        "& svg": {
+            color: theme.palette.primary.main,
+        },
+        "& svg:hover": {
+            color: theme.palette.secondary.main,
+        },
+        [theme.breakpoints.between("xs", "sm")]: {
+            minHeight: '15vh',
+            marginTop: '10px',
+        },
+        [theme.breakpoints.up("md")]: {
+            width: '350px',
+        },
+    },
+    cardContentContainerSocialHeader: {
+        paddingTop: '1rem',
+        textAlign: 'center',
+        fontFamily: 'Roboto',
+        fontSize: '1rem',
+        fontWeight: 'bold',
+    },
+    cardContentContainerSocialContent: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        [theme.breakpoints.between("xs", "sm")]: {
+            height: '10vh',
+            '& > *': {
+                margin: theme.spacing(1),
+                padding: "1px",
+                backgroundColor: "white"
+            },
+        },
+        [theme.breakpoints.up("sm")]: {
+            padding: "10px",
+            marginTop: "10px",
+            '& > *': {
+                margin: theme.spacing(1),
+                padding: "5px",
+                backgroundColor: "white"
+            },
+        },
+    },
     downloadButton: {
         position: "absolute",
+        color: '#FFFFFF',
         bottom: "2.5rem",
         right: "2rem",
         [theme.breakpoints.down("sm")]: {
+            bottom: ".2rem",
+            right: ".2rem",
+        },
+        [theme.breakpoints.up("md")]: {
             bottom: "2rem",
             right: "2rem",
         },

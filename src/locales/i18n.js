@@ -22,9 +22,12 @@ i18n
                         contact: 'Contáctame!'
                     },
                     aboutSection: {
-                        title1: "<span style='font-size: 2rem; font-weight: bold; color: #FF7043'>Hola! que tal?,</span>",
-                        title2: "<span style='font-size: 2rem; font-weight: bold; color: #FF7043'>Me llamo Jorge Fernández.</span>",
-                        subtitle: "<span style='font-size: 1.2rem; font-weight: bold'>Me encanta realizar actividades como desarrollador full-stack ❤️!</span>",
+                        title1: "Hola! que tal?,",
+                        title2: "Me llamo Jorge Fernández.",
+                        // title1: "<span style='font-size: 2rem; font-weight: bold; color: #FF7043'>Hola! que tal?,</span>",
+                        // title2: "<span style='font-size: 2rem; font-weight: bold; color: #FF7043'>Me llamo Jorge Fernández.</span>",
+                        subtitle: "<span style='font-size: 1.2rem; font-weight: bold'>Y me encanta realizar actividades como desarrollador full-stack ❤️!</span>",
+                        networks: "Sígueme en las redes sociales.",
                         content: `Vamos! recorre el sitio y conoce un poco mas sobre mi, o si prefieres descarga mi CV clickando en el botón ubicado
                             en la esquina inferior derecha de la tarjeta. Yey! 😄`,
                         downloadButton: "Descargar CV",
@@ -79,8 +82,11 @@ i18n
                         contact: 'Get in touch'
                     },
                     aboutSection: {
-                        title1: "<span style='font-size: 2rem; font-weight: bold; color: #FF7043'>What's up! yo,</span>",
-                        title2: "<span style='font-size: 2rem; font-weight: bold; color: #FF7043'>I'm Jorge Fernández.</span>",
+                        title1: "What's up! yo,",
+                        title2: "I'm Jorge Fernández.",
+                        // title1: "<span style='font-size: 2rem; font-weight: bold; color: #FF7043'>What's up! yo,</span>",
+                        // title2: "<span style='font-size: 2rem; font-weight: bold; color: #FF7043'>I'm Jorge Fernández.</span>",
+                        networks: "Follow me on social networks.",
                         subtitle: "<span style='font-size: 1.2rem; font-weight: bold'>And I ❤️ doing stuff as fullstack developer!</span>",
                         content: `C'mon, scroll down and know more about me, or if you are lazy one download my cv clicking on the right side
                             bottom corner button. Cheers 😄`,

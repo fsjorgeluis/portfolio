@@ -17,9 +17,16 @@ import { useStyles } from "./styles";
 
 
 const Contact = ({ id, title, dark }) => {
-    const [radioValue, setRadioValue] = useState("Hello");
-    const [toastOpen, setToastOpen] = useState(false);
-    const [loading, setLoading] = useState(false);
+      
+    const initialState = {
+        redioValue : "Hello",
+        toastOpen: false,
+        loading: false
+    }
+    
+    const [ state, setState ] useState(initialState);  
+    
+    
     const classes = useStyles();
 
     const handleChange = (e) => {
@@ -78,7 +85,7 @@ const Contact = ({ id, title, dark }) => {
                                 <span>Talk to me</span>
                                 <Radio
                                     value="Hello"
-                                    checked={radioValue === "Hello"}
+                                    checked={ state.radioValue === "Hello"}
                                     color="secondary"
                                     onChange={handleChange}
                                 />
@@ -86,7 +93,7 @@ const Contact = ({ id, title, dark }) => {
                                 <span>Get a Quote</span>
                                 <Radio
                                     value="Get a quote"
-                                    checked={radioValue === "Get a quote"}
+                                    checked={state.radioValue === "Get a quote"}
                                     color="secondary"
                                     onChange={handleChange}
                                 />
@@ -110,7 +117,7 @@ const Contact = ({ id, title, dark }) => {
                                 helperText={formik.errors.email ? formik.errors.email.message : null}
                             />
                             {
-                                radioValue === "Get a quote" ? (
+                                state.radioValue === "Get a quote" ? (
                                     <>
                                         <TextField
                                             name="services"
@@ -144,9 +151,9 @@ const Contact = ({ id, title, dark }) => {
                             <Button
                                 type="submit"
                                 variant="contained"
-                                disabled={loading}
+                                disabled={state.loading}
                             >
-                                {loading ? <CircularProgress size={24} /> : 'Send!'}
+                                {state.loading ? <CircularProgress size={24} /> : 'Send!'}
                             </Button>
                         </form>
                     </Paper>
@@ -157,7 +164,7 @@ const Contact = ({ id, title, dark }) => {
                     vertical: 'bottom',
                     horizontal: 'left',
                 }}
-                open={toastOpen}
+                open={state.toastOpen}
                 autoHideDuration={6000}
                 onClose={handleClose}
                 message="Message sent"

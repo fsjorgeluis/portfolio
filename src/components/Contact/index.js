@@ -19,7 +19,7 @@ import { useStyles } from "./styles";
 
 const Contact = ({ id, title, dark }) => {
     const initialState = {
-        redioValue: "Hello",
+        radioValue: "Hello",
         toastOpen: false,
         loading: false
     }
@@ -31,8 +31,7 @@ const Contact = ({ id, title, dark }) => {
     const classes = useStyles();
 
     const handleChange = (e) => {
-        console.log(e)
-        setState({ redioValue: e.target.value });
+        setState({ radioValue: e.target.value });
     };
 
     const handleClose = (event, reason) => {
@@ -62,6 +61,7 @@ const Contact = ({ id, title, dark }) => {
             setState({ loading: true });
             try {
                 const { data } = await axios.post('https://micro-mailer.herokuapp.com/send', values, config);
+
                 if (data.success) {
                     setState({ toastOpen: true });
                     setState({ loading: false });

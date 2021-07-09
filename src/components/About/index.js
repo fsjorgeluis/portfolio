@@ -55,22 +55,22 @@ const About = ({ id, dark }) => {
                                     <span>{t('aboutSection.networks')}</span>
                                 </Container>
                                 <Container fixed className={classes.cardContentContainerSocialContent}>
-                                    <Avatar>
+                                    <Avatar className={classes.socialNetwork}>
                                         <a href="https://www.instagram.com/linktodev/" target="_blank" rel="noopener noreferrer">
                                             <InstagramIcon />
                                         </a>
                                     </Avatar>
-                                    <Avatar>
+                                    <Avatar className={classes.socialNetwork}>
                                         <a href="https://github.com/fsjorgeluis" target="_blank" rel="noopener noreferrer">
                                             <GitHubIcon />
                                         </a>
                                     </Avatar>
-                                    <Avatar>
+                                    <Avatar className={classes.socialNetwork}>
                                         <a href="https://www.linkedin.com/in/jorge-luis-fern%C3%A1ndez-sarmiento-030a13166/" target="_blank" rel="noopener noreferrer">
                                             <LinkedInIcon />
                                         </a>
                                     </Avatar>
-                                    <Avatar>
+                                    <Avatar className={classes.socialNetwork}>
                                         <a href="https://twitter.com/fsjorgeluis" target="_blank" rel="noopener noreferrer">
                                             <TwitterIcon />
                                         </a>

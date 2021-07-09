@@ -1,4 +1,5 @@
-import { useRef, useState } from "react";
+import { useContext, useState } from "react";
+import { useTranslation } from 'react-i18next';
 import {
     AppBar,
     Divider,
@@ -24,40 +25,46 @@ import TranslateRoundedIcon from '@material-ui/icons/TranslateRounded';
 import KeyboardArrowDownRoundedIcon from '@material-ui/icons/KeyboardArrowDownRounded';
 import logo from '../../images/logos/logo_2.png';
 import { useStyles } from "./styles";
+import Internationalization from '../../context/i18n-context';
 
 
 const Navbar = () => {
     const classes = useStyles();
     const [open, setOpen] = useState(false);
     const [anchorEl, setAnchorEl] = useState(null);
-    const [language, setLanguage] = useState('ENGLISH');
+    const { language, setLanguage } = useContext(Internationalization);
     const menuOpen = Boolean(anchorEl);
-    let languageRef = useRef();
+    const { t } = useTranslation();
 
     const links = [
         {
             id: "about",
-            text: "About me",
+            text: `${t('navigationMenu.about')}`,
+            // text: "About me",
             icon: <InfoTwoToneIcon fontSize="large" className={classes.about} />
         },
         {
             id: "aptitudes",
-            text: "Aptitudes",
+            text: `${t('navigationMenu.aptitudes')}`,
+            // text: "Aptitudes",
             icon: <AccessibilityNewTwoToneIcon fontSize="large" className={classes.aptitudes} />
         },
         {
             id: "skills",
-            text: "Skills",
+            text: `${t('navigationMenu.skills')}`,
+            // text: "Skills",
             icon: <EmojiObjectsTwoToneIcon fontSize="large" className={classes.skills} />
         },
         {
             id: "jobs",
-            text: "My work",
+            text: `${t('navigationMenu.jobs')}`,
+            // text: "My work",
             icon: <BuildTwoToneIcon fontSize="large" className={classes.jobs} />
         },
         {
             id: "contact",
-            text: "Get in touch",
+            text: `${t('navigationMenu.contact')}`,
+            // text: "Get in touch",
             icon: <ContactMailTwoToneIcon fontSize="large" className={classes.contact} />
         }
     ];
@@ -72,7 +79,6 @@ const Navbar = () => {
 
     const handleClose = () => {
         setAnchorEl(null);
-        console.log(languageRef.current.firstChild.data)
     };
 
     return (
@@ -138,8 +144,20 @@ const Navbar = () => {
                             open={menuOpen}
                             onClose={handleClose}
                         >
-                            <MenuItem onClick={handleClose} ref={languageRef} value='ESPAÑOL'>Español</MenuItem>
-                            <MenuItem onClick={handleClose} ref={languageRef} value='ENGLISH'>English</MenuItem>
+                            <MenuItem
+                                onClick={(e) => {
+                                    handleClose();
+                                    setLanguage('english');
+                                }}>
+                                English
+                            </MenuItem>
+                            <MenuItem
+                                onClick={(e) => {
+                                    handleClose();
+                                    setLanguage('español');
+                                }}>
+                                Español
+                            </MenuItem>
                         </Menu>
                     </div>
 

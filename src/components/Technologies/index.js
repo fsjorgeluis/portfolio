@@ -1,4 +1,5 @@
 import { Paper, Typography } from '@material-ui/core';
+import { useTranslation } from 'react-i18next';
 import {
     Timeline,
     TimelineConnector,
@@ -12,11 +13,13 @@ import { techs } from '../../data/index';
 
 const Technologies = () => {
     const classes = useStyles();
+    const { t } = useTranslation();
+
     return (
         <div className={classes.timeline}>
             <Timeline align="left">
                 {
-                    techs.map(({ src, title, stars }, index) => (
+                    techs.map(({ id, src, title, stars }, index) => (
                         <TimelineItem key={index}>
                             <TimelineSeparator>
                                 <img src={src} alt={title} className={classes.customLogo} />
@@ -24,9 +27,9 @@ const Technologies = () => {
                             </TimelineSeparator>
                             <TimelineContent>
                                 <Paper elevation={3} className={classes.lineContent}>
-                                    {/* variant="h6" */}
                                     <Typography variant="subtitle1" component="h1">
-                                        {title}
+                                        {t(`skills.${id}`)}
+                                        {/* {title} */}
                                     </Typography>
                                     <StartRating stars={stars} />
                                 </Paper>

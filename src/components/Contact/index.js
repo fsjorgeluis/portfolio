@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useFormik } from "formik";
+import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 import {
     Button,
@@ -17,10 +18,11 @@ import { useStyles } from "./styles";
 
 
 const Contact = ({ id, title, dark }) => {
+    const classes = useStyles();
     const [radioValue, setRadioValue] = useState("Hello");
     const [toastOpen, setToastOpen] = useState(false);
     const [loading, setLoading] = useState(false);
-    const classes = useStyles();
+    const { t } = useTranslation();
 
     const handleChange = (e) => {
         setRadioValue(e.target.value);
@@ -30,7 +32,6 @@ const Contact = ({ id, title, dark }) => {
         if (reason === 'clickaway') {
             return;
         }
-
         setToastOpen(false);
     };
 
@@ -73,17 +74,19 @@ const Contact = ({ id, title, dark }) => {
                     <Typography variant="h3">{title}</Typography>
                     <Paper className={classes.root}>
                         <div className={classes.selection}>
-                            <Typography variant="h5">CONTACT ME</Typography>
+                            <Typography variant="h5">{t('contact.subtitle')}</Typography>
+                            {/* <Typography variant="h5">CONTACT ME</Typography> */}
                             <div className={classes.radios}>
-                                <span>Talk to me</span>
+                                <span>{t('contact.radio1')}</span>
+                                {/* <span>Talk to me</span> */}
                                 <Radio
                                     value="Hello"
                                     checked={radioValue === "Hello"}
                                     color="secondary"
                                     onChange={handleChange}
                                 />
-
-                                <span>Get a Quote</span>
+                                <span>{t('contact.radio2')}</span>
+                                {/* <span>Get a Quote</span> */}
                                 <Radio
                                     value="Get a quote"
                                     checked={radioValue === "Get a quote"}
@@ -146,7 +149,8 @@ const Contact = ({ id, title, dark }) => {
                                 variant="contained"
                                 disabled={loading}
                             >
-                                {loading ? <CircularProgress size={24} /> : 'Send!'}
+                                {loading ? <CircularProgress size={24} /> : `${t('contact.sendButton')}`}
+                                {/* {loading ? <CircularProgress size={24} /> : 'Send!'} */}
                             </Button>
                         </form>
                     </Paper>

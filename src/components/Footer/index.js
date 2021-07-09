@@ -2,6 +2,7 @@ import { IconButton, Typography } from "@material-ui/core";
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import TwitterIcon from '@material-ui/icons/Twitter';
 import { useStyles } from "./styles";
 
 const Footer = ({ dark }) => {
@@ -23,6 +24,11 @@ const Footer = ({ dark }) => {
                     <IconButton>
                         <a href="https://www.linkedin.com/in/jorge-luis-fern%C3%A1ndez-sarmiento-030a13166/" target="_blank" rel="noopener noreferrer">
                             <LinkedInIcon />
+                        </a>
+                    </IconButton>
+                    <IconButton>
+                        <a href="https://twitter.com/fsjorgeluis" target="_blank" rel="noopener noreferrer">
+                            <TwitterIcon />
                         </a>
                     </IconButton>
                 </div>

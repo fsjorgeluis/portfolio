@@ -43,56 +43,67 @@ import ecommerceMERN from "../images/works/ecommercemern.png";
 
 export const skills = [
     {
+        id: "card1",
         src: proactivityIcon,
         title: "Proactivity",
         stars: 5,
     },
     {
+        id: "card2",
         src: creativityIcon,
         title: "Creativity",
         stars: 5,
     },
     {
+        id: "card3",
         src: enthusiastIcon,
         title: "Enthusiastic",
         stars: 5,
     },
     {
+        id: "card4",
         src: positiveIcon,
         title: "Positive attitude",
         stars: 5,
     },
     {
+        id: "card5",
         src: comunicationIcon,
         title: "Comunication",
         stars: 5,
     },
     {
+        id: "card6",
         src: leaderIcon,
         title: "Leadership",
         stars: 5,
     },
     {
+        id: "card7",
         src: teamworkIcon,
         title: "Teamwork",
         stars: 5,
     },
     {
+        id: "card8",
         src: responsabilityIcon,
         title: "Responsability",
         stars: 5,
     },
     {
+        id: "card9",
         src: honestityIcon,
         title: "Honestity",
         stars: 5,
     },
     {
+        id: "card10",
         src: learnIcon,
         title: "Capacity of learn",
         stars: 5,
     },
     {
+        id: "card11",
         src: coffeeIcon,
         title: "Coffee drinker",
         stars: 5,
@@ -102,56 +113,67 @@ export const skills = [
 
 export const techs = [
     {
+        id: "card1",
         src: nodejsIcon,
         title: "NodeJs oriented to web development",
         stars: 4,
     },
     {
+        id: "card2",
         src: expressIcon,
         title: "Express for rest api development",
         stars: 4,
     },
     {
+        id: "card3",
         src: jsIcon,
         title: "JavaScript ES6",
         stars: 4,
     },
     {
+        id: "card4",
         src: tsIcon,
         title: "TypeScript for better js development",
         stars: 4,
     },
     {
+        id: "card5",
         src: graphqlIcon,
         title: "Graphql for better data management and avoid overfetch",
         stars: 3,
     },
     {
+        id: "card6",
         src: reactIcon,
         title: "Rectjs working with classes and/or hooks, making functional things on web",
         stars: 3,
     },
     {
+        id: "card7",
         src: reduxIcon,
         title: "Redux for reactjs, making usefull unique source of truth",
         stars: 3,
     },
     {
+        id: "card8",
         src: html5Icon,
-        title: "HTML5, everybody should know this :D",
+        title: "HTML5, everybody should know about this :D",
         stars: 5,
     },
     {
+        id: "card9",
         src: css3Icon,
         title: "CSS3 vanilla as well working with libraries and frameworks like tailwind and bootstrap",
         stars: 3,
     },
     {
+        id: "card10",
         src: phpIcon,
         title: "PHP vanilla and common frameworks like laravel as well cms like wordpress",
         stars: 4,
     },
     {
+        id: "card11",
         src: databaseIcon,
         title: "Relational and no-Relational database management",
         stars: 4,

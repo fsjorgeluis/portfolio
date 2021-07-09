@@ -18,20 +18,14 @@ import { useStyles } from "./styles";
 
 
 const Contact = ({ id, title, dark }) => {
-    const initialState = {
-        radioValue: "Hello",
-        toastOpen: false,
-        loading: false
-    };
-
-    const [state, setState] = useState(initialState);
-
+    const classes = useStyles();
+    const [radioValue, setRadioValue] = useState("Hello");
+    const [toastOpen, setToastOpen] = useState(false);
+    const [loading, setLoading] = useState(false);
     const { t } = useTranslation();
 
-    const classes = useStyles();
-
     const handleChange = (e) => {
-        setState({ radioValue: e.target.value });
+        setRadioValue(e.target.value);
     };
 
     const handleClose = (event, reason) => {
@@ -39,7 +33,7 @@ const Contact = ({ id, title, dark }) => {
             return;
         }
 
-        setState({ toastOpen: false });
+        setToastOpen(false);
     };
 
     const config = {
@@ -58,13 +52,12 @@ const Contact = ({ id, title, dark }) => {
         },
         validate,
         onSubmit: async values => {
-            setState({ loading: true });
+            setLoading(true);
             try {
                 const { data } = await axios.post('https://micro-mailer.herokuapp.com/send', values, config);
                 if (data.success) {
-                    setState({ toastOpen: true });
-                    setState({ loading: false });
-                    console.log(state.toastOpen)
+                    setToastOpen(true);
+                    setLoading(false);
                 }
                 formik.resetForm();
                 // alert(JSON.stringify(data, null, 2));
@@ -89,7 +82,7 @@ const Contact = ({ id, title, dark }) => {
                                 {/* <span>Talk to me</span> */}
                                 <Radio
                                     value="Hello"
-                                    checked={state.radioValue === "Hello"}
+                                    checked={radioValue === "Hello"}
                                     color="secondary"
                                     onChange={handleChange}
                                 />
@@ -97,7 +90,7 @@ const Contact = ({ id, title, dark }) => {
                                 {/* <span>Get a Quote</span> */}
                                 <Radio
                                     value="Get a quote"
-                                    checked={state.radioValue === "Get a quote"}
+                                    checked={radioValue === "Get a quote"}
                                     color="secondary"
                                     onChange={handleChange}
                                 />
@@ -121,7 +114,7 @@ const Contact = ({ id, title, dark }) => {
                                 helperText={formik.errors.email ? formik.errors.email.message : null}
                             />
                             {
-                                state.radioValue === "Get a quote" ? (
+                                radioValue === "Get a quote" ? (
                                     <>
                                         <TextField
                                             name="services"
@@ -155,9 +148,9 @@ const Contact = ({ id, title, dark }) => {
                             <Button
                                 type="submit"
                                 variant="contained"
-                                disabled={state.loading}
+                                disabled={loading}
                             >
-                                {state.loading ? <CircularProgress size={24} /> : `${t('contact.sendButton')}`}
+                                {loading ? <CircularProgress size={24} /> : `${t('contact.sendButton')}`}
                             </Button>
                         </form>
                     </Paper>
@@ -168,7 +161,7 @@ const Contact = ({ id, title, dark }) => {
                     vertical: 'bottom',
                     horizontal: 'left',
                 }}
-                open={state.toastOpen}
+                open={toastOpen}
                 autoHideDuration={6000}
                 onClose={handleClose}
                 message="Message sent"

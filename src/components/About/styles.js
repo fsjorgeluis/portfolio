@@ -117,10 +117,6 @@ export const useStyles = makeStyles((theme) => ({
     },
     socialNetwork: {
         backgroundColor: "#FFFFFF",
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        alignContent: 'center',
         "& svg": {
             fontSize: "1.7rem",
             color: theme.palette.primary.main,

@@ -26,7 +26,7 @@ i18n
                         title2: "Me llamo Jorge Fernández.",
                         // title1: "<span style='font-size: 2rem; font-weight: bold; color: #FF7043'>Hola! que tal?,</span>",
                         // title2: "<span style='font-size: 2rem; font-weight: bold; color: #FF7043'>Me llamo Jorge Fernández.</span>",
-                        subtitle: "<span style='font-size: 1.2rem; font-weight: bold'>Y me encanta realizar actividades como desarrollador full-stack ❤️!</span>",
+                        subtitle: "<span style='font-size: 1.2rem; font-weight: bold'>Y me gusta desempeñarme como desarrollador full-stack!</span>",
                         networks: "Sígueme en las redes sociales.",
                         content: `Vamos! recorre el sitio y conoce un poco mas sobre mi, o si prefieres descarga mi CV clickando en el botón ubicado
                             en la esquina inferior derecha de la tarjeta. Yey! 😄`,

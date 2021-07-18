@@ -187,7 +187,7 @@ export const myWork = [
         link: "https://github.com/fsjorgeluis/micromailer",
     },
     {
-        title: "NodeJs (TypeScript) password generator / also builded as npm package :D",
+        title: "NodeJs (TypeScript) password generator / also built as npm package :D",
         src: passwordGenerator,
         link: "https://github.com/fsjorgeluis/password-generator",
     },
